@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เปรียบเทียบ OOP: Java, C++, Python</title>
+    <title>การเปรียบเทียบ OOP ใน Java, C++, และ Python</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
         }
         th, td {
+            padding: 10px;
             border: 1px solid #ddd;
-            padding: 8px;
             text-align: left;
         }
         th {
@@ -26,53 +29,50 @@
     </style>
 </head>
 <body>
-    <h1>การเปรียบเทียบ OOP ด้วยภาษา Java, C++, Python</h1>
-
-    <h2>ความเหมือน</h2>
-    <ul>
-        <li>ทั้งหมดสนับสนุนแนวคิดการเขียนโปรแกรมเชิงวัตถุ (OOP)</li>
-        <li>ใช้แนวคิดหลัก ได้แก่ คลาส, วัตถุ, และการสืบทอด</li>
-        <li>สนับสนุนการทำงานกับ polymorphism</li>
-    </ul>
-
-    <h2>ความแตกต่าง</h2>
-    <table>
-        <tr>
-            <th>ภาษา</th>
-            <th>ลักษณะเฉพาะ</th>
-        </tr>
-        <tr>
-            <td>Java</td>
-            <td>
-                <ul>
-                    <li>ใช้การจัดการหน่วยความจำอัตโนมัติ (Garbage Collection)</li>
-                    <li>ทุกคลาสต้องอยู่ในไฟล์ที่มีชื่อเดียวกันกับคลาส</li>
-                    <li>ไม่สนับสนุน multiple inheritance แต่ใช้ interface</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>C++</td>
-            <td>
-                <ul>
-                    <li>สนับสนุน multiple inheritance</li>
-                    <li>ผู้ใช้ต้องจัดการหน่วยความจำเอง</li>
-                    <li>มีฟีเจอร์การเข้าถึง (access specifiers) ที่สามารถกำหนดได้</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Python</td>
-            <td>
-                <ul>
-                    <li>ใช้ dynamic typing</li>
-                    <li>มีฟีเจอร์การสืบทอดแบบ multiple และ mixin</li>
-                    <li>มี syntax ที่เรียบง่าย ทำให้เรียนรู้ได้เร็ว</li>
-                </ul>
-            </td>
-        </tr>
-    </table>
-
-    
+    <div class="container">
+        <h1>การเปรียบเทียบ OOP ใน Java, C++, และ Python</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>หัวข้อ</th>
+                    <th>Java</th>
+                    <th>C++</th>
+                    <th>Python</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>การประกาศคลาส</td>
+                    <td><pre>class MyClass { }</pre></td>
+                    <td><pre>class MyClass { }</pre></td>
+                    <td><pre>class MyClass: pass</pre></td>
+                </tr>
+                <tr>
+                    <td>การสร้างวัตถุ</td>
+                    <td><pre>MyClass obj = new MyClass();</pre></td>
+                    <td><pre>MyClass obj;</pre></td>
+                    <td><pre>obj = MyClass()</pre></td>
+                </tr>
+                <tr>
+                    <td>การสืบทอด</td>
+                    <td><pre>class SubClass extends SuperClass { }</pre></td>
+                    <td><pre>class SubClass : public SuperClass { }</pre></td>
+                    <td><pre>class SubClass(SuperClass): pass</pre></td>
+                </tr>
+                <tr>
+                    <td>การห่อหุ้ม</td>
+                    <td>ใช้ access modifiers เช่น private, protected, public</td>
+                    <td>ใช้ access specifiers เช่น private, protected, public</td>
+                    <td>ใช้การตั้งชื่อด้วย _ (underscore) เพื่อบอกว่าเป็น private</td>
+                </tr>
+                <tr>
+                    <td>การทำ polymorphism</td>
+                    <td>ใช้ method overriding และ interfaces</td>
+                    <td>ใช้ function overloading และ virtual functions</td>
+                    <td>ใช้ method overriding และ duck typing</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
